@@ -3,7 +3,7 @@ using namespace std;
 int main() 
 { 
    int NB,P,Tb;
-  cout<<"The numbers of          notebooks,pens"<<endl;
+  cout<<"The numbers ofnotebooks,pens"<<endl;
   NB=3*120;
   P=2*40;
   Tb=NB+P;
