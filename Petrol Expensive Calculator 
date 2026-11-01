@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    float Dt,AFC,Pp,PC,Fc;
+    cout<<"Distance traveled by motorcycle, Average fuel consumption , Petrol price, Petrol Consumed,Fuel cost"<<endl;
+    cin>>Dt>>AFC>>Pp;
+    PC=Dt/AFC;
+    Fc=PC*Pp;
+    cout<<"Petrol Consumed = "<<PC<<endl<<"Total Fuel cost = "<<Fc;
+    return 0;
+}
