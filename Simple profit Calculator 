@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    float pp,sp,np,tcp,tsp,pro;
+    cout<<"purchase price,sold price, number of product sales or bought, Total cost price, Total sales price, profit"<<endl;
+    cin>>pp>>sp>>np;
+    tcp=np*pp;
+    tsp=np*sp;
+    pro=sp-pp;
+    cout<<"Total cost price = "<<tcp<<endl<<"Total sales price = "<<tsp<<endl<<"Profit or loss = "<<pro;
+
+    return 0;
+}
