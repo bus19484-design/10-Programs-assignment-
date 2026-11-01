@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{   float EUC,perU,Tb;
+    cout<<"Number of Electricity units consumed"<<endl;
+    cin>>EUC;
+    cout<<"Price per unit"<<endl;
+    cin>>perU;
+    Tb=EUC*perU;
+    cout<<"Total bill = "<<Tb;
+    return 0;
+}
