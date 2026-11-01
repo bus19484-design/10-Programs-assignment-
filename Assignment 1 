@@ -10,5 +10,5 @@ int main()
     pro=sp-pp;
     cout<<"Total cost price = "<<tcp<<endl<<"Total sales price = "<<tsp<<endl<<"Profit or loss = "<<pro;
 
-    return 0;
+  return 0;
 }
