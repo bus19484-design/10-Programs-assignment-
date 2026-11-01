@@ -8,6 +8,6 @@ int main()
     M=12.0*Age;
     W=52.0*Age;
     D=365.0*Age;
-    cout<<"Age= "<<Age<<endl<<"Months = "<<M<<endl<<"Weeks = "<<W<<endl<<"Days = "<<D<<endl;
+    cout<<"Age= "<<Age<<endl<<"Months ="<<M<<endl<<"Weeks = "<<W<<endl<<"Days ="<<D<<endl;
     return 0;
 }
