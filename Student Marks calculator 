@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{   float M,P,C,B,U,TM,Ns,Mm,Ave,Per;
+    cout<<"Marks obtain in Math,Physics,Computer,Biology,Urdu,number of subjects,Total Marks,Marks of subjects"<<endl;
+    cin>>M>>P>>C>>B>>U;
+    TM=M+P+C+B+U;
+    Ns=5.0;
+    Ave=TM/5;
+    Mm=5.0*100.0;
+    Per=(TM/Mm)*100.0;
+    cout<<"Total Marks = "<<TM<<endl<<"Average = "<<Ave<<endl<<"Percentage="<<Per<<endl;
+    return 0;
+}
