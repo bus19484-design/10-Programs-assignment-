@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    float Age,M,W,D;
+    cout<<"Age of person in years"<<endl;
+    cin>>Age;
+    M=12.0*Age;
+    W=52.0*Age;
+    D=365.0*Age;
+    cout<<"Age= "<<Age<<endl<<"Months = "<<M<<endl<<"Weeks = "<<W<<endl<<"Days = "<<D<<endl;
+    return 0;
+}
