@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    float Sec,Min,Hours;
+    cout<<"Convert time from secondds to minutes and hours"<<endl;
+    cin>>Sec;
+    Min=Sec/60;
+    Hours=Sec/3600;
+    cout<<"Minutes = "<<Min<<endl<<"Hours = "<<Hours;
+    return 0;
+}
