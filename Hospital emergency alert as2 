@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{ float Temp ;
+cout<<" Temperature in Cenegrate °C"<<endl;
+cin>>Temp;
+if (Temp>=39)
+cout<<"High Fever Alert: Seek Medical Assessment";
+    return 0;
+}
