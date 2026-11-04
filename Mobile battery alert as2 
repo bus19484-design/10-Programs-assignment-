@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{ float Battery;
+cout<<" Battery level in percentage "<<endl;
+cin>>Battery;
+if (Battery<=15)
+cout<<"Low battery! Please charge your mobile";
+    return 0;
+}
