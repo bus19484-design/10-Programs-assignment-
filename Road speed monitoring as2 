@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{ float Sp;
+cout<<" Road Speed Monitoring "<<endl;
+cin>>Sp;
+if (Sp>60)
+cout<<"Speed Limit Violated !!!";
+    return 0;
+}
