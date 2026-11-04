@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{ float At ;
+cout<<" Office Attendance Percentage %"<<endl;
+cin>>At;
+if (At<75)
+cout<<"Attendance Warning!!";
+    return 0;
+}
