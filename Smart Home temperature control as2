@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{ float Temp ;
+cout<<" Room Temperature in °C "<<endl;
+cin>>Temp;
+if (Temp>30)
+cout<<"Turn ON the cooling system";
+    return 0;
+}
