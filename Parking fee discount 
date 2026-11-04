@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    float hours;
+    int studentID;
+    
+    cout<<"Enter Parking Hours and Student ID (1 for Yes, 0 for No)"<<endl;
+    cin>>hours>>studentID;
+
+    if (studentID==1 )
+    if  ( hours>=2)
+    cout<<"Student Parking Discount Applicable ";
+     return 0;
+     }
