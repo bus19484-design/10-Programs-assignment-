@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int units, late;
+    float bill;
+
+    cout << "Enter Units: ";
+    cin >> units;
+    cout << "Late? 1 for Yes, 0 for No: ";
+    cin >> late;
+
+    bill = 0;
+
+    if (units <= 100)
+    {
+        bill = units * 10;
+    }
+    else if (units <= 200)
+    {
+        bill = 100 * 10 + (units - 100) * 15;
+    }
+    else if (units <= 500)
+    {
+        bill = 100 * 10 + 100 * 15 + (units - 200) * 20;
+    }
+    else
+    {
+        bill = 100 * 10 + 100 * 15 + 300 * 20 + (units - 500) * 25;
+    }
+
+    if (bill > 10000)
+    {
+        if (late == 1)
+        {
+            bill = bill + bill * 5 / 100 + bill * 10 / 100;
+        }
+        else
+        {
+            bill = bill + bill * 5 / 100;
+        }
+    }
+    else if (late == 1)
+    {
+        bill = bill + bill * 10 / 100;
+    }
+    else
+    {
+        bill = bill;
+    }
+
+    cout << "Final Bill = " << bill;
+    return 0;
+}
