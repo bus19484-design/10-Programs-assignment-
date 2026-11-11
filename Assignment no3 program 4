@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int oxygen, heart, age;
+    float temp;
+
+    cout << "Enter Oxygen, Heart Rate, Age, Temperature: ";
+    cin >> oxygen >> heart >> age >> temp;
+
+    if (oxygen < 90)
+    {
+        cout << "Critical";
+    }
+    else if (heart > 130)
+    {
+        cout << "Critical";
+    }
+    else if (heart < 45)
+    {
+        cout << "Critical";
+    }
+    else if (age > 65)
+    {
+        if (temp > 102)
+        {
+            cout << "High Priority";
+        }
+        else if (oxygen >= 90)
+        {
+            if (oxygen <= 94)
+            {
+                cout << "Moderate";
+            }
+            else
+            {
+                cout << "Normal";
+            }
+        }
+        else
+        {
+            cout << "Normal";
+        }
+    }
+    else if (oxygen >= 90)
+    {
+        if (oxygen <= 94)
+        {
+            cout << "Moderate";
+        }
+        else
+        {
+            cout << "Normal";
+        }
+    }
+    else
+    {
+        cout << "Normal";
+    }
+    return 0;
+}
