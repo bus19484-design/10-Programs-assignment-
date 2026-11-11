@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int speed, prevViolation, licence, registered;
+    float fine;
+    cout << "Enter Speed, Prev Violation 1/0, Licence 1/0, Registered 1/0: ";
+    cin >> speed >> prevViolation >> licence >> registered;
+
+    fine = 0;
+
+    if (speed <= 60)
+    {
+        fine = 0;
+    }
+    else if (speed <= 80)
+    {
+        fine = 2000;
+    }
+    else if (speed <= 100)
+    {
+        fine = 5000;
+    }
+    else
+    {
+        fine = 10000;
+    }
+
+    if (prevViolation == 1)
+    {
+        fine = fine + fine * 25 / 100;
+    }
+    else
+    {
+        fine = fine;
+    }
+
+    if (licence == 0)
+    {
+        fine = fine + 5000;
+    }
+    else
+    {
+        fine = fine;
+    }
+
+    if (registered == 0)
+    {
+        fine = fine + 10000;
+    }
+    else
+    {
+        fine = fine;
+    }
+
+    cout << "Total Fine = " << fine << endl;
+    if (fine == 0)
+    {
+        cout << "Can Continue Journey";
+    }
+    else
+    {
+        cout << "Pay Fine First";
+    }
+    return 0;
+}
