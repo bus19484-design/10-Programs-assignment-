@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int purchase, premium, unpaid;
+    float finalAmount, discount;
+    cout << "Enter Purchase, Premium 1/0, Unpaid 1/0: ";
+    cin >> purchase >> premium >> unpaid;
+
+    if (unpaid == 1)
+    {
+        cout << "Order Cannot Be Confirmed - Unpaid Previous Order";
+    }
+    else if (purchase > 50000)
+    {
+        discount = purchase * 20 / 100;
+        finalAmount = purchase - discount;
+        if (premium == 1)
+        {
+            finalAmount = finalAmount - finalAmount * 5 / 100;
+        }
+        else
+        {
+            finalAmount = finalAmount;
+        }
+        if (finalAmount > 20000)
+        {
+            cout << "Payable = " << finalAmount << endl;
+            cout << "Delivery Free - Order Confirmed";
+        }
+        else
+        {
+            finalAmount = finalAmount + 500;
+            cout << "Payable = " << finalAmount << endl;
+            cout << "Order Confirmed";
+        }
+    }
+    else if (purchase > 25000)
+    {
+        discount = purchase * 15 / 100;
+        finalAmount = purchase - discount;
+        if (premium == 1)
+        {
+            finalAmount = finalAmount - finalAmount * 5 / 100;
+        }
+        else
+        {
+            finalAmount = finalAmount;
+        }
+        if (finalAmount > 20000)
+        {
+            cout << "Payable = " << finalAmount << endl;
+            cout << "Delivery Free - Order Confirmed";
+        }
+        else
+        {
+            finalAmount = finalAmount + 500;
+            cout << "Payable = " << finalAmount << endl;
+            cout << "Order Confirmed";
+        }
+    }
+    else if (purchase > 10000)
+    {
+        discount = purchase * 10 / 100;
+        finalAmount = purchase - discount;
+        if (premium == 1)
+        {
+            finalAmount = finalAmount - finalAmount * 5 / 100;
+        }
+        else
+        {
+            finalAmount = finalAmount;
+        }
+        if (finalAmount > 20000)
+        {
+            cout << "Payable = " << finalAmount << endl;
+            cout << "Delivery Free - Order Confirmed";
+        }
+        else
+        {
+            finalAmount = finalAmount + 500;
+            cout << "Payable = " << finalAmount << endl;
+            cout << "Order Confirmed";
+        }
+    }
+    else
+    {
+        finalAmount = purchase;
+        if (premium == 1)
+        {
+            finalAmount = finalAmount - finalAmount * 5 / 100;
+        }
+        else
+        {
+            finalAmount = finalAmount;
+        }
+        finalAmount = finalAmount + 500;
+        cout << "Payable = " << finalAmount << endl;
+        cout << "Order Confirmed";
+    }
+    return 0;
+}
