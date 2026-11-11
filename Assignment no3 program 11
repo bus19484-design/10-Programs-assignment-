@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int validInsurance, policyExpired, licence, alcohol, responsible;
+    int damage;
+    float payable;
+    cout << "Enter ValidInsurance 1/0, Expired 1/0, Licence 1/0, Alcohol 1/0, Responsible 1/0, Damage: ";
+    cin >> validInsurance >> policyExpired >> licence >> alcohol >> responsible >> damage;
+
+    payable = damage;
+
+    if (validInsurance == 0)
+    {
+        cout << "Claim Rejected - No Valid Insurance";
+    }
+    else if (policyExpired == 1)
+    {
+        cout << "Claim Rejected - Policy Expired";
+    }
+    else if (licence == 0)
+    {
+        cout << "Claim Rejected - No Valid Licence";
+    }
+    else if (alcohol == 1)
+    {
+        cout << "Claim Rejected - Driver Under Influence of Alcohol";
+    }
+    else if (damage < 20000)
+    {
+        if (responsible == 1)
+        {
+            payable = payable - payable * 20 / 100;
+        }
+        else
+        {
+            payable = payable;
+        }
+        cout << "Claim Approved Without Inspection" << endl;
+        cout << "Payable Amount = " << payable;
+    }
+    else if (damage <= 200000)
+    {
+        if (responsible == 1)
+        {
+            payable = payable - payable * 20 / 100;
+        }
+        else
+        {
+            payable = payable;
+        }
+        cout << "Claim Approved - Physical Inspection Required" << endl;
+        cout << "Payable Amount = " << payable;
+    }
+    else
+    {
+        if (responsible == 1)
+        {
+            payable = payable - payable * 20 / 100;
+        }
+        else
+        {
+            payable = payable;
+        }
+        cout << "Claim Approved - Manager Approval Required" << endl;
+        cout << "Payable Amount = " << payable;
+    }
+    return 0;
+}
