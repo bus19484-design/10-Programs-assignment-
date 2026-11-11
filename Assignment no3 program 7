@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int attendance, rating, years, salary;
+    float finalSalary, bonus;
+    cout << "Enter Salary, Attendance, Rating, Years: ";
+    cin >> salary >> attendance >> rating >> years;
+
+    bonus = 0;
+
+    if (rating < 3)
+    {
+        bonus = 0;
+    }
+    else if (attendance < 75)
+    {
+        bonus = 0;
+    }
+    else if (attendance <= 89)
+    {
+        bonus = salary * 5 / 100;
+    }
+    else if (attendance <= 95)
+    {
+        bonus = salary * 10 / 100;
+    }
+    else
+    {
+        bonus = salary * 15 / 100;
+    }
+
+    finalSalary = salary + bonus;
+
+    if (years > 5)
+    {
+        finalSalary = finalSalary + 5000;
+    }
+    else
+    {
+        finalSalary = finalSalary;
+    }
+
+    cout << "Final Salary = " << finalSalary;
+    return 0;
+}
