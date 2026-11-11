@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int balance, withdraw, dailyWithdrawn, blocked;
+    int remaining;
+    cout << "Enter Balance, Withdraw, Daily Withdrawn, Blocked 1/0: ";
+    cin >> balance >> withdraw >> dailyWithdrawn >> blocked;
+
+    if (blocked == 1)
+    {
+        cout << "Transaction Rejected - Account Blocked";
+    }
+    else if (withdraw < 500)
+    {
+        cout << "Transaction Rejected - Minimum Withdrawal Rs. 500";
+    }
+    else if (withdraw % 500 != 0)
+    {
+        cout << "Transaction Rejected - Must Be Multiple of 500";
+    }
+    else if (withdraw > balance)
+    {
+        cout << "Transaction Rejected - Insufficient Balance";
+    }
+    else if (dailyWithdrawn + withdraw > 100000)
+    {
+        cout << "Transaction Rejected - Daily Limit Exceeded";
+    }
+    else if (withdraw > 50000)
+    {
+        remaining = balance - withdraw;
+        cout << "Additional Verification Required" << endl;
+        cout << "Transaction Allowed" << endl;
+        cout << "Remaining Balance = " << remaining;
+    }
+    else
+    {
+        remaining = balance - withdraw;
+        cout << "Transaction Allowed" << endl;
+        cout << "Remaining Balance = " << remaining;
+    }
+    return 0;
+}
