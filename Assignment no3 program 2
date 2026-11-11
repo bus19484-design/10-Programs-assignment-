@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int matric, inter, test;
+
+    cout << "Enter Matric, Inter, Test Marks: ";
+    cin >> matric >> inter >> test;
+
+    if (matric < 60)
+    {
+        cout << "Admission Rejected";
+    }
+    else if (inter < 65)
+    {
+        cout << "Admission Rejected";
+    }
+    else if (test < 50)
+    {
+        cout << "Admission Rejected";
+    }
+    else if (inter >= 85)
+    {
+        if (test >= 80)
+        {
+            cout << "Eligible for Admission" << endl;
+            cout << "Qualifies for Merit Scholarship";
+        }
+        else
+        {
+            cout << "Eligible for Admission - Normal Category";
+        }
+    }
+    else
+    {
+        cout << "Eligible for Admission - Normal Category";
+    }
+    return 0;
+}
