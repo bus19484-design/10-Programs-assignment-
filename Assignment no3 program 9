@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int km, waiting, hour, premium, cancelled;
+    float fare;
+    cout << "Enter Km, Waiting Minutes, Hour 0-23, Premium 1/0, Cancelled 1/0: ";
+    cin >> km >> waiting >> hour >> premium >> cancelled;
+
+    if (cancelled == 1)
+    {
+        cout << "Penalty Rs. 300 Charged to Driver";
+    }
+    else
+    {
+        fare = 150 + km * 50 + waiting * 10;
+        if (hour >= 22)
+        {
+            fare = fare + fare * 20 / 100;
+        }
+        else if (hour < 6)
+        {
+            fare = fare + fare * 20 / 100;
+        }
+        else
+        {
+            fare = fare;
+        }
+        if (premium == 1)
+        {
+            fare = fare - fare * 10 / 100;
+        }
+        else
+        {
+            fare = fare;
+        }
+        cout << "Final Fare = " << fare;
+    }
+    return 0;
+}
