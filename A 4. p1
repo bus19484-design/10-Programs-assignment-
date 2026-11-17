@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n,s;
+    s=0;
+    for(n=1;n<=100;n++)
+   { cout<<n<<endl;
+   if(n<=100)
+     s=s+n;
+     }
+ cout<<"sum ="<<s;
+ return 0;
+  }
